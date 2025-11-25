@@ -23,7 +23,7 @@ function generateCaptcha() {
 
 // Option A - Show normal form + change URL
 optionAButton.addEventListener('click', () => {
-    history.pushState({}, "", "/newsletter");   // ← Change URL here
+    history.pushState({}, "", "fw-crm-v2/newsletter");   // ← Change URL here
 
     welcomeSection.classList.add('hidden');
     externalForm.classList.add('hidden');
@@ -35,7 +35,7 @@ optionAButton.addEventListener('click', () => {
 
 // Option B - Show external form + change URL
 optionBButton.addEventListener('click', () => {
-    history.pushState({}, "", "/updates");  // ← Change URL here
+    history.pushState({}, "", "fw-crm-v2//updates");  // ← Change URL here
 
     welcomeSection.classList.add('hidden');
     formContainer.classList.add('hidden');
