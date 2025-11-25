@@ -57,3 +57,9 @@ button:hover {
 #captcha-container {
     margin-top: 10px;
 }
+
+#external-embed {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
