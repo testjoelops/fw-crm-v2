@@ -7,7 +7,7 @@ const externalForm = document.getElementById('external-form');
 const captchaQuestion = document.getElementById('captcha-question');
 const captchaAnswer = document.getElementById('captcha-answer');
 const submitBtn = document.getElementById('submit-btn');
-const form = document.getElementById('crm_lead-form');
+const form = document.getElementById('crm_lead-form_2');
 const thankYou = document.getElementById('thank-you-message');
 const externalEmbed = document.getElementById('external-embed');
 
