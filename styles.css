@@ -58,8 +58,8 @@ button:hover {
     margin-top: 10px;
 }
 
-#external-embed {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+#external-embed iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
 }
