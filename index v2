@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src='//in.fw-cdn.com/32055818/1094741.js' chat='true'></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TestJoelOps</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Welcome!</h1>
+
+        <!-- Initial Welcome Section -->
+        <div id="welcome-section">
+            <p>Welcome! Please choose how you want to continue:</p>
+            <button id="Newsletter</button>
+            <button id="Product Updates">Option B: Open External Web Form</button>
+        </div>
+
+        <!-- Option B - External Embed -->
+        <div id="external-form" class="hidden">
+            <h2>External Form</h2>
+            <!-- Paste your embed code below -->
+            <div id="external-embed">[Paste your embed code here]</div>
+        </div>
+
+        <!-- Option A - Normal Form -->
+        <div id="form-container" class="hidden">
+            <form id="crm_lead-form">
+
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="company" placeholder="Company">
+
+                <!-- CAPTCHA -->
+                <div id="captcha-container">
+                    <span id="captcha-question"></span>
+                    <input type="number" id="captcha-answer" placeholder="Enter answer" required>
+                </div>
+
+                <button id="submit-btn" type="submit" class="hidden">Submit</button>
+            </form>
+
+            <div id="thank-you-message" class="hidden">
+                Thank you for the submission!
+            </div>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
