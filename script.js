@@ -21,8 +21,10 @@ function generateCaptcha() {
     captchaQuestion.textContent = `What is ${a} + ${b}?`;
 }
 
-// Option A - Show normal form
+// Option A - Show normal form + change URL
 optionAButton.addEventListener('click', () => {
+    history.pushState({}, "", "/newsletter");   // ← Change URL here
+
     welcomeSection.classList.add('hidden');
     externalForm.classList.add('hidden');
     formContainer.classList.remove('hidden');
@@ -30,8 +32,11 @@ optionAButton.addEventListener('click', () => {
     generateCaptcha();
 });
 
-// Option B - Show external form
+
+// Option B - Show external form + change URL
 optionBButton.addEventListener('click', () => {
+    history.pushState({}, "", "/updates");  // ← Change URL here
+
     welcomeSection.classList.add('hidden');
     formContainer.classList.add('hidden');
     externalForm.classList.remove('hidden');
