@@ -58,8 +58,34 @@ button:hover {
     margin-top: 10px;
 }
 
-#external-embed iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto;
+/* ---------- External embed container (put at bottom of styles.css) ---------- */
+#external-embed {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: auto;           /* allow internal scrolling if embed is too tall/wide */
+  max-height: 75vh;        /* limit height so page never breaks; tweak as needed */
+  padding: 0;
 }
+
+/* Make iframes inside the embed responsive */
+#external-embed iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none;
+  display: block;
+  min-height: 500px;      /* fallback height; adjust smaller/larger */
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* If the embed injects a form or elements (not in an iframe),
+   force them to fit the parent and enable vertical scrolling when needed */
+#external-embed * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+}
+
+/* optionally add a subtle inner scrollbar and nicer spacing */
+#external-embed::-webkit-scrollbar { height: 8px; }
