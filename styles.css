@@ -89,3 +89,7 @@ button:hover {
 
 /* optionally add a subtle inner scrollbar and nicer spacing */
 #external-embed::-webkit-scrollbar { height: 8px; }
+
+/* remove freshworks branding */
+.fserv-container div.powered-by { display: none !important ;}
+
