@@ -50,12 +50,12 @@ function goTo(view, urlPath) {
 
 // Option A - Show normal form + change URL
 optionAButton.addEventListener('click', () => {
-  goTo('a', '/news');
+  goTo('a', '/fw-crm-v2/news');
 });
 
 // Option B - Show external form + change URL
 optionBButton.addEventListener('click', () => {
-  goTo('b', '/updates');
+  goTo('b', '/fw-crm-v2/updates');
 
   // If externally embedding code dynamically, inject it here.
   // Example: externalEmbed.innerHTML = '<iframe src="..."></iframe>';
@@ -78,9 +78,9 @@ window.addEventListener('popstate', (event) => {
   }
   // Fallback by pathname
   const path = location.pathname.replace(/\/$/, ""); // remove trailing slash
-  if (path === '/something') {
+  if (path === '/news') {
     showView('a');
-  } else if (path === '/otherthing') {
+  } else if (path === '/updates') {
     showView('b');
   } else {
     showView('welcome');
@@ -91,10 +91,10 @@ window.addEventListener('popstate', (event) => {
 (function initFromPath() {
   // ensure there's a reasonable state for popstate navigation
   const path = location.pathname.replace(/\/$/, "");
-  if (path === '/something') {
+  if (path === '/news') {
     history.replaceState({ view: 'a' }, "", path || "/news");
     showView('a');
-  } else if (path === '/otherthing') {
+  } else if (path === '/updates') {
     history.replaceState({ view: 'b' }, "", path || "/updates");
     showView('b');
   } else {
